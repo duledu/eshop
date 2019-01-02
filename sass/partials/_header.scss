@@ -1,0 +1,191 @@
+.main-header{
+  .top-bar{
+    padding: 10px 0;
+    a{
+      font-size: 14px;
+      &:hover{
+        color: $link-hover;
+      }
+    }
+    .phone{
+      float: left;
+    }
+    .login{
+      float: right;
+      text-transform: uppercase;
+    }
+  }
+  .navbar{
+    background-color: white;
+    margin-bottom: 0;
+    border: none;
+    .navbar-toggle{
+      float: left;
+      padding: 0;
+      margin: 0;
+      margin-top: 17px;
+      margin-left: 15px;
+      margin-right: 15px;
+      border: none;
+      .icon-bar{
+        width: 20px;
+        height: 4px;
+        border-radius: 3px;
+        @include border-radius(2px);
+        background-color: black;
+        & + .icon-bar{
+          margin-top: 2px;
+        }
+
+      }
+    }
+    > .conatainer{
+      position: relative;
+    }
+  }
+  .logo{
+    width: 58px;
+    margin-top: 17px;
+    margin-bottom: 0;
+    float: left;
+  }
+  .search-cart-holder{
+    position: absolute;
+    top: 10px;
+    right: 23px;
+    .search, .cart{
+      display: inline-block;
+    }
+    .search{
+      position: relative;
+      margin-right: 14px;
+      .form-control{
+        display: block;
+        width: 140px;
+        height: 24px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        @include border-radius(0);
+        box-shadow: none;
+        padding-right: 20px;
+        padding-top: 3px;
+        padding-left: 4px;
+        &:focus{
+          border-bottom-color: $link-hover;
+
+        }
+      }
+      .btn{
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        background-image: url("../img/search-icon.png");
+        background-repeat: no-repeat;
+        display: block;
+        width: 17px;
+        height: 18px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        &:focus{
+          outline: none;
+
+        }
+        &:active{
+          box-shadow: none;
+        }
+
+      }
+    }
+    .cart{
+
+      position: relative;
+      .badge{
+        position: absolute;
+        padding: 4px 6px 3px;
+        background-color: red;
+        right: -8px;
+        bottom: -8px;
+      }
+    }
+  }
+  .nav{
+    padding-bottom: 5px;
+    padding-right: 45px;
+    li{
+      text-align: center;
+      a{
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparent;
+        text-transform: uppercase;
+        display: inline-block;
+        &:hover, &:focus{
+          background-color: transparent;
+          border-bottom-color: $nav-active;
+        }
+      }
+    }
+    .active{
+          a{
+            border-bottom: 2px solid $nav-active;
+
+          }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .main-header{
+    .top-bar{
+      a{
+        font-size: 16px;
+      }
+    }
+    .logo{
+      width: 80px;
+      margin-top: 10px;
+    }
+    .nav{
+      li{
+        &:not(last-child){
+          margin-right: 30px;
+          padding-bottom: 0px;
+
+        }
+      }
+    }
+    .navbar{
+      padding-top: 45px;
+      padding-bottom: 45px;
+      border-radius: 0;
+    }
+
+    .search-cart-holder{
+      top:16px;
+    }
+  }
+
+}
+@media (min-width: 992px) {
+  .main-header{
+    nav{
+         padding-right: 125px;
+      li{
+        &:last-child{
+          margin-right: 30px;
+        }
+      }
+    }
+    .search-cart-holder{
+    top: 50px;
+    }
+  }
+}
+@media (min-width: 1200px){
+  .main-header{
+    .logo{
+      width: 104px;
+    }
+  }
+}
