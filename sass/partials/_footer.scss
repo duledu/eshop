@@ -1,0 +1,63 @@
+.main-footer{
+  color: white;
+  a{
+    color: white;
+  }
+  .footer-top{
+    background-color: $footer-bkg;
+    padding: 50px 0;
+    h3{
+      font-size: 40px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .f-info{
+      color: $footer-text;
+      margin-bottom: 20px;
+    }
+    p{
+      margin-bottom: 0;
+      a{
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+    }
+    .back-to-top{
+      display: none;
+    }
+  }
+  .footer-bootom{
+    padding: 15px 0;
+    .soc-net{
+      text-align: center;
+      li{
+        display: inline-block;
+        &:not(:last-child){
+          margin-right: 10px;
+        }
+      }
+
+      a{
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-indent: -99999px;
+        &.ks{
+          background-image: url("../img/krojacevaskola.png");
+        }
+        &.fb{
+          background-image: url("../img/facebook.png");
+        }
+        &.tw{
+          background-image: url("../img/twitter.png");
+        }
+        &.ins{
+          background-image: url("../img/instagram.png");
+        }
+        &.yt{
+          background-image: url("../img/youtube.png");
+        }
+      }
+    }
+  }
+}
