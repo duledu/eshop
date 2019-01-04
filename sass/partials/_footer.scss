@@ -68,6 +68,31 @@
     }
   }
 }
+.nav{
+  padding-bottom: 5px;
+  padding-right: 45px;
+  li{
+    text-align: center;
+    a{
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      text-transform: uppercase;
+      display: inline-block;
+      &:hover, &:focus{
+        background-color: transparent;
+        border-bottom-color: $nav-active;
+      }
+    }
+  }
+  .active{
+        a{
+          border-bottom: 2px solid $nav-active;
+
+        }
+  }
+}
 @media(min-width: 768px){
   .main-footer{
     .footer-top{
@@ -117,6 +142,90 @@
         &:hover{
           background-image: url("../img/back-to-top-blue.png");
           background-color: white;
+        }
+      }
+    }
+    .footer-bootom{
+      .soc-net{
+        float: left;
+        li{
+          &:not(:last-child){
+            margin-right: 0px;
+            }
+
+          a{
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      .footer-nav{
+        float: right;
+        padding-bottom: 0;
+        li{
+          float: left;
+          &:not(:last-child){
+            margin-right: 20px;
+
+          }
+          a{
+            color: $link-color;
+            font-size: 12px;
+            padding: 0 0 3px;
+
+            }
+        }
+
+      }
+    }
+  }
+}
+@media (min-width: 992px){
+  .main-footer{
+    .footer-top{
+      .info{
+        font-size: 14px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+    .footer-bootom{
+      padding: 25px 0;
+    }
+  }
+}
+@media (min-width: 1200px){
+  .main-footer{
+    .footer-top{
+      h4{
+        margin-top: 50px;
+      }
+      .tags{
+        li{
+          a{
+            padding: 9px 13px;
+          }
+        }
+      }
+    }
+    .footer-bootom{
+      padding: 35px 0;
+    }
+
+  }
+}
+@media (min-width: 1400px){
+  .main-footer{
+    .footer-top{
+      .back-to-top{
+        border-color: #85c3dc;
+        bottom: -60px;
+        background-image: url("../img/back-to-top-blue.png");
+        &:hover{
+          background-color: #85c3dc;
+          background-image: url("../img/back-to-top-white.png");
+
         }
       }
     }
